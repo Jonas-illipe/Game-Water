@@ -8,14 +8,14 @@ public class EnemyBullet : MonoBehaviour
 
     Rigidbody2D rb;
 
-    /*Player*/ target;
+    /*Player target;
     Vector2 moveDirection;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D> ();
-        target = GameObject.FindObjectOfType</*Player*/>();
+        target = GameObject.FindObjectOfType<//Player//>();
         moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
         Destroy (gameObject, 3f);
@@ -24,10 +24,10 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D (Collider2D col)
     {
-        if (col.gameObject.name.Equals(/*"Player"*/))
+        if (col.gameObject.name.Equals("Player"))
         {
             Debug.Log("Hit");
-            Destroy (gameObject);
+            Destroy (gameObject);*/
         }
     }
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
-{
+{/*
     float moveSpeed = 7f;
 
     Rigidbody2D rb;
 
-    /*Player target;
+    Player target;
     Vector2 moveDirection;
 
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class EnemyBullet : MonoBehaviour
         if (col.gameObject.name.Equals("Player"))
         {
             Debug.Log("Hit");
-            Destroy (gameObject);*/
+            Destroy (gameObject);
         }
-    }
+    } */
 }

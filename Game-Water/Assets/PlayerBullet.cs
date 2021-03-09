@@ -12,6 +12,8 @@ public class PlayerBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x + 0.25f, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x + 0.15f, transform.position.y, transform.position.z);
+       
     }
+    
 }

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8009140529071535943}
   - component: {fileID: 3266673935487168407}
-  - component: {fileID: 4439660911685616754}
   - component: {fileID: 3205829574644078055}
   - component: {fileID: 309761113211755525}
+  - component: {fileID: -781173615993265659}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -84,18 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4439660911685616754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7856511700638486718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b40684a345b4aa5408d6bb65059a5833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &3205829574644078055
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,3 +131,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 6
+--- !u!114 &-781173615993265659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7856511700638486718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0782931e090b8ed409366d8431924e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  rbb: {fileID: 309761113211755525}

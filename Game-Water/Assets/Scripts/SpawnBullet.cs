@@ -2,31 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBulletShot : MonoBehaviour
+public class SpawnBullet : MonoBehaviour
 {
-    
-    Vector2 angle;
+    public Transform bulletpoint;
     public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(bullet, transform.position, transform.rotation);
+            Shoot();
         }
-
-
-
-    }
-    private void FixedUpdate()
-    {
-        
+        void Shoot()
+        {
+            Instantiate(bullet, bulletpoint.position, bulletpoint.rotation);
+        }
     }
 }

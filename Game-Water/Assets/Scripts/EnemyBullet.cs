@@ -25,7 +25,7 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D (Collider2D col)
     {
-        if (col.gameObject.name.Equals("Player"))
+        if (col.gameObject.name.Equals("player"))
         {
             Debug.Log("Hit");
             Destroy (gameObject);

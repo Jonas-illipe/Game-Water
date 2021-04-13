@@ -12,6 +12,8 @@ public class EnemyBullet : MonoBehaviour
 
     Vector2 moveDirection;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class EnemyBullet : MonoBehaviour
         if (col.gameObject.name.Equals("player"))
         {
             Debug.Log("Hit");
+
             Destroy (gameObject);
         }
     } 

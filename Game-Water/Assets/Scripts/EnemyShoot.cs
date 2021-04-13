@@ -10,6 +10,16 @@ public class EnemyShoot : MonoBehaviour
     float fireRate;
     float nextFire;
 
+    [SerializeField]
+    Transform player;
+
+    [SerializeField]
+    float agroRange;
+
+    Rigidbody2D rb2d;
+
+
+
     // Start is called before the first frame update
     void Start()
     {// sätter fire rate till 1 skott i sekunden
@@ -30,5 +40,10 @@ public class EnemyShoot : MonoBehaviour
             Instantiate(bullet, transform.position, Quaternion.identity);
             nextFire = Time.time + fireRate;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
     }
 }

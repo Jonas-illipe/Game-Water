@@ -22,4 +22,15 @@ public class EnemyHealth : MonoBehaviour
             GameObject.Destroy(Enemy);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("PlayerBullet"))
+        {
+            currentEnemyHealth -= 40;
+            Destroy(collision.gameObject);
+        }
+       
+
+    }
+
 }

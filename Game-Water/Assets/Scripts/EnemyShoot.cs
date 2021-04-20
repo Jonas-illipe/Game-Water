@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows.WebCam;
@@ -18,19 +19,33 @@ public class EnemyShoot : MonoBehaviour
 
     Rigidbody2D rb2d;
 
-
+    bool playerInVision;
 
     // Start is called before the first frame update
     void Start()
     {// sätter fire rate till 1 skott i sekunden
-        fireRate = 1f;
+        fireRate = 2f;
         nextFire = Time.time;
+        playerInVision = false;
+
     }
 
-    // Update is called once per frame
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("player"))
+        {
+            playerInVision = true;
+            Console.WriteLine(playerInVision);
+        }
+    }
     void Update()
     {//gör att CheckIfTimeToFire voiden startar varje frame precis som i update
-        CheckIfTimeToFire ();
+
+        if (playerInVision == true)
+        { 
+            CheckIfTimeToFire();
+        } 
+
     }
 
     void CheckIfTimeToFire()
@@ -40,10 +55,5 @@ public class EnemyShoot : MonoBehaviour
             Instantiate(bullet, transform.position, Quaternion.identity);
             nextFire = Time.time + fireRate;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
     }
 }

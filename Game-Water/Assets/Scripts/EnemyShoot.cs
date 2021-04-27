@@ -31,7 +31,6 @@ public class EnemyShoot : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("hej!");
         if (collision.gameObject.name.Equals("player"))
         {
             playerInVision = true;
@@ -44,7 +43,6 @@ public class EnemyShoot : MonoBehaviour
         if (collision.gameObject.name.Equals("player")) ;
         {
             playerInVision = false;
-            Debug.Log("Halloj!");
         }
     }
 

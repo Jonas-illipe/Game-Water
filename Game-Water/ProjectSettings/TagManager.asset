@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Testenemy
   - PlayerBullet
+  - AcidPool
   layers:
   - Default
   - TransparentFX

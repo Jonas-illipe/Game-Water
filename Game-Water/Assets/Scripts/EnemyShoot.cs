@@ -29,15 +29,25 @@ public class EnemyShoot : MonoBehaviour
         playerInVision = false;
 
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("player"))
+        Debug.Log("hej!");
+        if (collision.gameObject.name.Equals("player"))
         {
             playerInVision = true;
-            Console.WriteLine(playerInVision);
+            
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("player")) ;
+        {
+            playerInVision = false;
+            Debug.Log("Halloj!");
+        }
+    }
+
     void Update()
     {//gör att CheckIfTimeToFire voiden startar varje frame precis som i update
 

@@ -531,8 +531,8 @@ GameObject:
   - component: {fileID: 573506762}
   - component: {fileID: 573506761}
   - component: {fileID: 573506760}
-  - component: {fileID: 573506759}
   - component: {fileID: 573506758}
+  - component: {fileID: 573506759}
   m_Layer: 0
   m_Name: JabbaTheSnut
   m_TagString: Untagged
@@ -568,12 +568,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 573506757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69d228d42ccf54343a9745af7cfee06c, type: 3}
+  m_Script: {fileID: 11500000, guid: b0ac9460b0912814a9c2543d739203dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMaxHealth: 400
-  currentEnemyHealth: 0
-  Enemy: {fileID: 573506757}
+  bossMaxHealth: 400
+  currentBossHealth: 0
+  Boss: {fileID: 573506757}
 --- !u!61 &573506760
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28276,7 +28276,6 @@ GameObject:
   - component: {fileID: 1311664307}
   - component: {fileID: 1311664306}
   - component: {fileID: 1311664309}
-  - component: {fileID: 1311664308}
   m_Layer: 0
   m_Name: AcidPool
   m_TagString: AcidPool
@@ -28324,25 +28323,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1311664308
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311664305}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6fdd7ddec173584e82b3d25625fb081, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1311664309
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28660,6 +28640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bccd6861e59f664185fafbab7cbc6ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Maxhealth: 200
+  currenthealth: 0
 --- !u!114 &1535015898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29239,7 +29221,6 @@ GameObject:
   - component: {fileID: 1895040218}
   - component: {fileID: 1895040217}
   - component: {fileID: 1895040216}
-  - component: {fileID: 1895040215}
   m_Layer: 0
   m_Name: AcidPool (2)
   m_TagString: AcidPool
@@ -29247,25 +29228,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1895040215
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895040214}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6fdd7ddec173584e82b3d25625fb081, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1895040216
 SpriteRenderer:
   m_ObjectHideFlags: 0

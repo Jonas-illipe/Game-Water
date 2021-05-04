@@ -2,25 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class EnemyHealth : MonoBehaviour
+public class BossHealth2 : MonoBehaviour
 {
-    public int enemyMaxHealth = 120;
-    public int currentEnemyHealth;
-    public GameObject Enemy;
+    public int bossMaxHealth = 400;
+    public int currentBossHealth;
+    public GameObject Boss;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentEnemyHealth = enemyMaxHealth;
+        currentBossHealth = bossMaxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentEnemyHealth == 0) 
+        if (currentBossHealth == 0)
         {
-            GameObject.Destroy(Enemy);
+            GameObject.Destroy(Boss);
             
 
         }
@@ -29,11 +28,12 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("PlayerBullet"))
         {
-            currentEnemyHealth -= 40;
+            currentBossHealth -= 40;
             Destroy(collision.gameObject);
         }
-       
+
 
     }
 
 }
+

@@ -28550,6 +28550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Maxhealth: 200
   currenthealth: 0
+  Player: {fileID: 1535015896}
 --- !u!114 &1535015898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28574,7 +28575,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.04863542, y: 0.26163197}
